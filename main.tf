@@ -2,12 +2,12 @@ terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      backend "s3" {
-        bucket = "ed069ecc-a1e5-dd6a-817c-d44008f43244-backend"
-        key = "terraform/webapp/terraform.tfstate"
-        region = "us-east-1"
-      }
     }
+  }
+  backend "s3" {
+    bucket = "ed069ecc-a1e5-dd6a-817c-d44008f43244-backend"
+    key    = "terraform/webapp/terraform.tfstate"
+    region = "us-east-1"
   }
 }
 
